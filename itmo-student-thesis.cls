@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{itmo-student-thesis}[2017/06/08 v1.2]
+\ProvidesClass{itmo-student-thesis}[2018/06/18 v1.2]
 
 \LoadClass[14pt,a4paper]{extreport}
 
@@ -270,8 +270,10 @@
 \setcounter{@yearminus}{\theyear}%
 \addtocounter{@yearminus}{-5}%
 \def\@yearminusfive{\value{@yearminus}}%
-\addtocounter{@yearminus}{-5}%
-\def\@yearminusten{\value{@yearminus}}%
+\newcounter{@yearminus2}%
+\setcounter{@yearminus2}{\theyear}%
+\addtocounter{@yearminus2}{-10}%
+\def\@yearminusten{\value{@yearminus2}}%
 %%% Компоненты фильтров
 \newcommand{\@iffiveyears}{\iffieldint{year}{\ifnumless{\thefield{year}}{\@yearminusfive}{\skipentry}{}}{\skipentry}}%
 \newcommand{\@iftenyears}{\iffieldint{year}{\ifnumless{\thefield{year}}{\@yearminusfive}{\ifnumless{\thefield{year}}{\@yearminusten}{\skipentry}{}}{\skipentry}}{\skipentry}}%
