@@ -367,9 +367,9 @@
 \titleformat{\chapter}[block]{\normalsize\bfseries\center}{ГЛАВА~\thechapter.~}%
 {0pt}{\begin{MakeUppercase}}[\end{MakeUppercase}\thispagestyle{\TheOnlyTruePageStyle}]
 \titlespacing{\chapter}{0pt}{-30pt}{0pt}
-\titleformat{\section}[block]{\normalsize\bfseries\center}{\thesection.~}{0pt}{}
+\titleformat{\section}[block]{\normalsize\bfseries\center}{\thesection~}{0pt}{}
 \titlespacing{\section}{0pt}{0pt}{0pt}
-\titleformat{\subsection}[block]{\normalsize\bfseries\center}{\thesubsection.~}{0pt}{}
+\titleformat{\subsection}[block]{\normalsize\bfseries\center}{\thesubsection~}{0pt}{}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \titleformat{\subsubsection}[block]{\normalsize\bfseries\center}{\thesubsubsection.~}{0pt}{}
 \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
@@ -425,19 +425,19 @@
 \titlecontents{chapter}
     [\chapterPrefix]
     {}
-    {\contentslabel[\thecontentslabel.]{\chapterW}}
+    {\contentslabel[\thecontentslabel]{\chapterW}}
     {\hspace*{-\chapterW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{section}
     [\sectionPrefix]
     {}
-    {\contentslabel[\thecontentslabel.]{\sectionW}}
+    {\contentslabel[\thecontentslabel]{\sectionW}}
     {\hspace*{-\sectionW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{subsection}
     [\subsectionPrefix]
     {}
-    {\contentslabel[\thecontentslabel.]{\subsectionW}~}
+    {\contentslabel[\thecontentslabel]{\subsectionW}~}
     {\hspace*{-\subsectionW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 
@@ -690,7 +690,8 @@
             \russiansourcesfiveyears & \russiansourcestenyears & \russiansourcesveryold &
             \foreignsourcesfiveyears & \foreignsourcestenyears & \foreignsourcesveryold \\\hline
         \end{tabular}\par
-        \noindent \textbf{6 Использование информационных ресурсов Internet:} \internetsources \par
+        \noindent \textbf{6 Использование информационных ресурсов Internet:} %\internetsources \par 
+        да, число ресурсов: 16 \par
         \pagebreak[3]
         \noindent \textbf{7 Использование современных пакетов компьютерных программ и технологий:}
         \begin{center}
